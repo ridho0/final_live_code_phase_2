@@ -1,8 +1,8 @@
-const User = require('../models/collections/users')
+const Article = require('../models/collections/articles')
 const methods = {}
 
 methods.insertOne = function(req, res) {
-  User.create(req.body, function(error, record) {
+  Article.create(req.body, function(error, record) {
     if (error) {
       res.json({ error })
     } else {
@@ -12,7 +12,7 @@ methods.insertOne = function(req, res) {
 }
 
 methods.getAll = function(req, res) {
-  User.find({},  function(error, records) {
+  Article.find({},  function(error, records) {
     if (error) {
       res.json({ error })
     } else {
@@ -22,8 +22,8 @@ methods.getAll = function(req, res) {
 } // getAll
 
 
-// methods.getByUserName = function(req, res) {
-//   User.findOne({ username: req.params.username})
+// methods.getByArticleName = function(req, res) {
+//   Article.findOne({ username: req.params.username})
 //     .select('username')
 //     .exec((error, record) => {
 //       if (error) {
@@ -35,7 +35,7 @@ methods.getAll = function(req, res) {
 // }
 
 methods.updateById = function(req, res) {
-  User.findByIdAndUpdate(req.params.id, { $set: req.body }, {new : true})
+  Article.findByIdAndUpdate(req.params.id, { $set: req.body }, {new : true})
     .exec((error, record) => {
       if (error) {
         res.json({ error })
@@ -46,7 +46,7 @@ methods.updateById = function(req, res) {
 }// updateById
 
 methods.deleteById = function(req, res) {
-  User.findByIdAndRemove(req.params.id)
+  Article.findByIdAndRemove(req.params.id)
     .exec((error, record) => {
       if (error) {
         res.json({ error })
