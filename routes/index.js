@@ -4,10 +4,12 @@ const userController = require('../controllers/user.js')
 const articleController = require('../controllers/article.js')
 
 /* GET home page. */
-routes.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
-  // res.send("hai")
-});
+// routes.get('/', function(req, res, next) {
+//   res.render('index', { title: 'Express' });
+//   // res.send("hai")
+// });
+
+routes.get('/', articleController.getAll)
 
 routes.get('/register', function(req, res){
   res.render('register')

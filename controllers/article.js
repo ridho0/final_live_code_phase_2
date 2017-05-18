@@ -16,7 +16,8 @@ methods.getAll = function(req, res) {
     if (error) {
       res.json({ error })
     } else {
-      res.json(records)
+      // res.json(records)
+      res.render( 'index', { article:records })
     }
   })
 } // getAll
