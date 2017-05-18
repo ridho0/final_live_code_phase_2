@@ -20,10 +20,39 @@
           <li><a href="register">register</a></li>
           <li><a href="inputarticle">input article</a></li>
         </ul>
+        <!-- Modal Trigger -->
+        <a class="modal-trigger waves-effect waves-light btn" href="#modal1">Modal</a>
+
+        <!-- Modal Structure -->
+        <div id="modal1" class="modal modal-fixed-footer">
+          <div class="modal-content">
+            <h4>Modal Header</h4>
+            <p>A bunch of text</p>
+          </div>
+          <div class="modal-footer">
+            <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Agree</a>
+          </div>
+        </div>
       </div>
     </nav>
 
     <h1>test</h1>
+
+
+  <!-- Modal Trigger -->
+  <a class="waves-effect waves-light btn" href="#modal1">Modal</a>
+
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <h4>Modal Header</h4>
+      <p>A bunch of text</p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+    </div>
+  </div>
+
     <!-- <%= article %> -->
     <div class="container">
       <% article.forEach(function(a){ %>
@@ -77,7 +106,7 @@
             </div>
           </div>
         </footer>
-            
+
 
   </body>
 </html>
